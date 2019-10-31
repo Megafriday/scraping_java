@@ -8,11 +8,11 @@ import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
 import org.jsoup.select.Elements;
 
-public class Scraping {
+public class Samurai {
 
 	final private String selector = "#primary > div > div > div > article > header > h2 > a";
 
-	public void start() throws IOException {
+	public void scraping() throws IOException {
 
 		// 対象ページ
 		ArrayList<String> urlList = new ArrayList<String>();
