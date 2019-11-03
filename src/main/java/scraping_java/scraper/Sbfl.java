@@ -1,4 +1,4 @@
-package scraping_java;
+package scraping_java.scraper;
 
 import java.io.IOException;
 import java.util.ArrayList;
@@ -8,7 +8,7 @@ import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
 import org.jsoup.select.Elements;
 
-public class Sbfl {
+public class Sbfl implements IScraper{
 
 	final private String titleSelector = "section > a > div.entry-inner > header > h2";
 	final private String aSelector = "#godios-wrapper > div > main > section > a";

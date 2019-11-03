@@ -1,4 +1,4 @@
-package scraping_java;
+package scraping_java.scraper;
 
 import java.io.IOException;
 import java.util.ArrayList;
@@ -8,9 +8,9 @@ import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
 import org.jsoup.select.Elements;
 
-public class Samurai {
+public class Samurai implements IScraper {
 
-	final private String selector = "#primary > div > div > div > article > header > h2 > a";
+	final private String aSelector = "#primary > div > div > div > article > header > h2 > a";
 
 	public void scraping() throws IOException {
 
@@ -37,12 +37,13 @@ public class Samurai {
 	private void getTitle(String url) throws IOException {
 
 		Document document = Jsoup.connect(url).get();
-		Elements elements = document.select(selector);
+		Elements aElements = document.select(aSelector);
 
-		for (Element element : elements) {
-			System.out.println(element.text());
+		for (Element aElement : aElements) {
+			System.out.println(aElement.text());
 		}
 
 		System.out.println("------------------------------------------------------");
+
 	}
 }
